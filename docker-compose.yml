@@ -10,10 +10,16 @@ services:
       - postgres
       - redis
     environment:
-      DATABASE_URL: postgres://postgres:postgres@postgres:5432/medusa-docker
-      REDIS_URL: redis://redis:6379
       JWT_SECRET: some_jwt_secret
       COOKIE_SECRET: some_cookie_secret
+      DATABASE_TYPE: postgres
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/medusa-docker
+      REDIS_URL: redis://redis:6379
+      # Paypal Plugin
+      PAYPAL_SANDBOX: true
+      PAYPAL_CLIENT_ID:
+      PAYPAL_CLIENT_SECRET:
+      PAYPAL_AUTH_WEBHOOK_ID:
     ports:
       - "9000:9000"
 

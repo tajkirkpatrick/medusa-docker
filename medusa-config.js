@@ -50,6 +50,18 @@ const plugins = [
       autoRebuild: true,
     },
   },
+  // paypal plugin
+  {
+    resolve: `medusa-payment-paypal`,
+    /** @type {import('medusa-payment-paypal').PaypalOptions} */
+    options: {
+      // capture: false, // Uncomment and enable to 'true' to allow for automatic capture of payments
+      sandbox: process.env.PAYPAL_SANDBOX,
+      clientId: process.env.PAYPAL_CLIENT_ID,
+      clientSecret: process.env.PAYPAL_CLIENT_SECRET,
+      authWebhookId: process.env.PAYPAL_AUTH_WEBHOOK_ID,
+    },
+  },
 ];
 
 const modules = {
