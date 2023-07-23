@@ -6,6 +6,8 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
 
+RUN npm install -g @medusajs/medusa-cli
+
 # Install pnpm
 RUN npm install -g pnpm
 
@@ -27,6 +29,7 @@ ENV COOKIE_SECRET="secret"
 ENV DATABASE_TYPE="postgres"
 ENV DATABASE_URL="postgres://postgres:postgres@postgres:5432/medusa-docker"
 ENV REDIS_URL="redis://redis:6379"
+ENV ADMIN_CORS="/http:\/\/*/"
 
 # Paypal Payment Variables
 ENV PAYPAL_SANDBOX=true
