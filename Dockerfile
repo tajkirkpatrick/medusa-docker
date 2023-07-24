@@ -9,7 +9,7 @@ COPY package*.json ./
 RUN npm install -g @medusajs/medusa-cli
 
 # Install dependencies
-RUN npm ci
+RUN npm install
 
 # Bundle app source
 COPY . /usr/src/app
