@@ -6,11 +6,10 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
 
-# Install pnpm
-RUN npm install -g pnpm
+RUN npm install -g @medusajs/medusa-cli
 
 # Install dependencies
-RUN pnpm install
+RUN npm ci
 
 # Bundle app source
 COPY . /usr/src/app
