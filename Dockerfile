@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 # Install app dependencies
 COPY package*.json ./
 
+# Install Medusa CLI
 RUN npm install -g @medusajs/medusa-cli
 
 # Install pnpm
