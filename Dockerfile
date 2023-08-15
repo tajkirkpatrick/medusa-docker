@@ -27,6 +27,7 @@ ENV DATABASE_TYPE="postgres"
 ENV DATABASE_URL="postgres://postgres:postgres@postgres:5432/medusa-docker"
 ENV REDIS_URL="redis://redis:6379"
 ENV ADMIN_CORS="/http:\/\/*/"
+ENV STORE_CORS="/http:\/\/*/"
 
 # Paypal Payment Variables
 ENV PAYPAL_SANDBOX=true

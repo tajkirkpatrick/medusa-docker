@@ -42,6 +42,7 @@ const plugins = [
     resolve: `@medusajs/file-local`,
     options: {
       upload_dir: "uploads",
+      backend_url: "https://api.staygoldapparel.net"
     },
   },
   // To enable the admin plugin, uncomment the following lines and run `yarn add @medusajs/admin`
