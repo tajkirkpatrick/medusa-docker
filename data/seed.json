@@ -1,6 +1,9 @@
 {
   "store": {
-    "currencies": ["eur", "usd"]
+    "currencies": [
+      "eur",
+      "usd"
+    ]
   },
   "users": [
     {
@@ -14,18 +17,37 @@
       "name": "EU",
       "currency_code": "eur",
       "tax_rate": 0,
-      "payment_providers": ["manual"],
-      "fulfillment_providers": ["manual"],
-      "countries": ["gb", "de", "dk", "se", "fr", "es", "it"]
+      "payment_providers": [
+        "manual"
+      ],
+      "fulfillment_providers": [
+        "manual"
+      ],
+      "countries": [
+        "gb",
+        "de",
+        "dk",
+        "se",
+        "fr",
+        "es",
+        "it"
+      ]
     },
     {
       "id": "test-region-na",
       "name": "NA",
       "currency_code": "usd",
       "tax_rate": 0,
-      "payment_providers": ["manual"],
-      "fulfillment_providers": ["manual"],
-      "countries": ["us", "ca"]
+      "payment_providers": [
+        "manual"
+      ],
+      "fulfillment_providers": [
+        "manual"
+      ],
+      "countries": [
+        "us",
+        "ca"
+      ]
     }
   ],
   "shipping_options": [
@@ -136,11 +158,19 @@
       "options": [
         {
           "title": "Size",
-          "values": ["S", "M", "L", "XL"]
+          "values": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
         },
         {
           "title": "Color",
-          "values": ["Black", "White"]
+          "values": [
+            "Black",
+            "White"
+          ]
         }
       ],
       "variants": [
@@ -349,7 +379,12 @@
       "options": [
         {
           "title": "Size",
-          "values": ["S", "M", "L", "XL"]
+          "values": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
         }
       ],
       "variants": [
@@ -454,7 +489,12 @@
       "options": [
         {
           "title": "Size",
-          "values": ["S", "M", "L", "XL"]
+          "values": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
         }
       ],
       "variants": [
@@ -559,7 +599,12 @@
       "options": [
         {
           "title": "Size",
-          "values": ["S", "M", "L", "XL"]
+          "values": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
         }
       ],
       "variants": [
@@ -667,7 +712,12 @@
       "options": [
         {
           "title": "Size",
-          "values": ["S", "M", "L", "XL"]
+          "values": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
         }
       ],
       "variants": [
@@ -775,7 +825,12 @@
       "options": [
         {
           "title": "Size",
-          "values": ["S", "M", "L", "XL"]
+          "values": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ]
         }
       ],
       "variants": [
@@ -882,7 +937,9 @@
       "options": [
         {
           "title": "Size",
-          "values": ["One Size"]
+          "values": [
+            "One Size"
+          ]
         }
       ],
       "variants": [
