@@ -1,0 +1,43 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tajkirkpatrick/medusa:v1.0.0
+    container_name: medusa-server-stack
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      JWT_SECRET: some_jwt_secret
+      COOKIE_SECRET: some_cookie_secret
+      DATABASE_TYPE: postgres
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/medusa-docker
+      REDIS_URL: redis://redis:6379
+      #
+      ADMIN_CORS: /http:\/\/*/
+      STORE_CORS: /http:\/\/*/
+      # Paypal Plugin
+      PAYPAL_SANDBOX: true
+      PAYPAL_CLIENT_ID:
+      PAYPAL_CLIENT_SECRET:
+      PAYPAL_AUTH_WEBHOOK_ID:
+    ports:
+      - "9000:9000"
+
+  postgres:
+    image: postgres:10.4
+    container_name: medusa-postgres-stack
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: medusa-docker
+
+  redis:
+    image: redis
+    container_name: medusa-redis-stack
+    expose:
+      - 6379
